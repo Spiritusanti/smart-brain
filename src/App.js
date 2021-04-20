@@ -13,7 +13,7 @@ const particlesOptions = {
   //customize this to your liking
   particles: {
     number: {
-      value: 30,
+      value: 80,
       density: {
         enable: true,
         value_area: 800
@@ -26,8 +26,8 @@ const initialState = {
   input: '',
   imageUrl: '',
   boxes: [],
-  route: 'signin',
-  isSignedIn: false,
+  route: 'home',
+  isSignedIn: true,
   user: {
     id: '',
     name: '',
