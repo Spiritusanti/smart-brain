@@ -52,7 +52,7 @@ class App extends Component {
     const token = window.sessionStorage.getItem('token');
     if(token) {
       fetch('http://localhost:3000/signin', {
-        method: 'POST',
+        method: 'post',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': token
@@ -62,7 +62,7 @@ class App extends Component {
       .then(data => {
         if(data && data.id) {
           fetch(`http://localhost:3000/profile/${data.id}`, {
-            method: 'GET',
+            method: 'get',
             headers: {
               'Content-Type': 'application/json',
               'Authorization': token
