@@ -29,10 +29,10 @@ class Profile extends React.Component {
     }
 
     onProfileUpdate = (data) => {
-        fetch(`http//:localhost:3000/profile/${this.props.user.id}`, {
+        fetch(`http://localhost:3000/profile/${this.props.user.id}`, {
             method: 'post',
             headers: {
-                'content-type': 'application/json',
+                'Content-Type': 'application/json',
                 'Authorization': window.sessionStorage.getItem('token')
             },
             body: JSON.stringify({ formInput: data })
