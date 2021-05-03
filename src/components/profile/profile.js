@@ -43,7 +43,6 @@ class Profile extends React.Component {
         } 
         }).catch(console.log);
     }
-
     render() {
         const { user } = this.props;
         const { name, age, pet } = this.state;
