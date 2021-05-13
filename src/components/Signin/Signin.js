@@ -26,7 +26,10 @@ class Signin extends React.Component {
   onSubmitSignIn = () => {
     fetch('https://granum-id.herokuapp.com/signin', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com/'
+      },
       body: JSON.stringify({
         email: this.state.signInEmail,
         password: this.state.signInPassword
@@ -40,7 +43,8 @@ class Signin extends React.Component {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
-                'Authorization': data.token
+                'Authorization': data.token,
+                'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com/'
               }
             })
             .then(resp => resp.json())
