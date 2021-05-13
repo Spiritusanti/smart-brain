@@ -51,7 +51,7 @@ class App extends Component {
   componentDidMount() {
     const token = window.sessionStorage.getItem('token');
     if(token) {
-      fetch('http://localhost:3000/signin', {
+      fetch('https://granum-id.herokuapp.com/signin', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ class App extends Component {
       .then(resp => resp.json())
       .then(data => {
         if(data && data.id) {
-          fetch(`http://localhost:3000/profile/${data.id}`, {
+          fetch(`https://granum-id.herokuapp.com//profile/${data.id}`, {
             method: 'get',
             headers: {
               'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://granum-id.herokuapp.com//imageurl', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://granum-id.herokuapp.com/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json',

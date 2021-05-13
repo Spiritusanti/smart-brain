@@ -29,7 +29,7 @@ class Profile extends React.Component {
     }
 
     onProfileUpdate = (data) => {
-        fetch(`http://localhost:3000/profile/${this.props.user.id}`, {
+        fetch(`https://granum-id.herokuapp.com/profile/${this.props.user.id}`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
