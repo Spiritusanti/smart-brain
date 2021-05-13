@@ -28,7 +28,7 @@ class Signin extends React.Component {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com/'
+        'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com'
       },
       body: JSON.stringify({
         email: this.state.signInEmail,
