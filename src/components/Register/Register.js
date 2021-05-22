@@ -27,8 +27,7 @@ class Register extends React.Component {
     fetch('https://granum-id.herokuapp.com/register', {
       method: 'post',
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com/'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         email: this.state.email,

@@ -55,7 +55,6 @@ class App extends Component {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com/',
           'Authorization': token
         }
       })
@@ -66,7 +65,6 @@ class App extends Component {
             method: 'get',
             headers: {
               'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': 'https://granum-ego.herokuapp.com/',
               'Authorization': token
             }
           })
