@@ -12,7 +12,7 @@ import Profile from './components/profile/profile';
 import './App.css';
 
 const particlesOptions = {
-  //customize this to your liking
+  //customize this to your liking - yay particles!
   particles: {
     number: {
       value: 80,
